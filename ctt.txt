@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Person{
+    public:
+    string nama;
+    Height(double h)
+    private:
+    int height;
+};
+double Height::getHeight(void){
+    return height;
+};
+signed main(){
+    Person Dafa;
+    Dafa.nama = "Dafa Farhan Haqiqi";
+    
+    cout<<Dafa.nama<<endl;
+    
+    int x = 42;
+    void* p = &x; // p points to x
+    int y = *static_cast<int*>(p); 
+    int z = *reinterpret_cast<int*>(p);
+    cout<<y<<' '<<z;
+}
