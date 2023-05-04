@@ -20,25 +20,24 @@ class Stack:
     def size(self):
         return len(self.stack)
     def rm(self,item):
-        del self.stack[item]
+      if len(self.stack) >= item:
+          del self.stack[item]
 
-    def remove(self, item):
-        if item in self.stack:
-            self.stack.remove(item)
-            return item
+    def rmtop(self):
+        if len(self.stack):
+          del self.stack[-1]
         else:
             return None
-s = Stack() #deklarasi stac
 
-s.push(1) #memasukan nilai
+s = Stack() #create stack obj  
+s.push(1)
 s.push(2)
 s.push(3)
 s.push(4)
-s.push(5)
-s.push(6)
-s.remove(s.peek())#hapus nilai paling atas
-s.rm(1) #hapus stack ke 1
+s.push(5) #insert val
+s.rmtop() #pop top
+
 
 while(s.size()):
     print(s.peek())
-    s.remove(s.peek())
+    s.rmtop()
